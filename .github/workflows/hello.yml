@@ -10,11 +10,10 @@ on:
 # These are jobs inside the workflow
 jobs: 
 
-  # This is the name of the job
+  # This is the name of the job 1
    greet:
      # This is github runner. each job runs on a runner
      runs-on: ubuntu-latest
-     
      steps:
        - name: say hello to users
          run: echo "Hello Friends" 
@@ -22,8 +21,9 @@ jobs:
        - name: say hello to username
          run: echo " Hello $USER" 
          
-   details:
-     runs-on: ubuntu-latest
+    # This is the name of the job 2      
+   show-version:
+     runs-on: ubuntu-latest 
      steps:
       - name: version of python, docker, etc
         run:  docker --version && python --version
