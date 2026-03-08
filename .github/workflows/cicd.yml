@@ -1,9 +1,19 @@
 # This is the name of the workflow that will be displayed in the Actions Tab
 name: CICD
 
-# Manual Click (deliver) workflow whenever user needs
+# Manual Click (deliver) workflow whenever the user needs
 on:
   workflow_dispatch: 
+    inputs:
+      environment:
+        description: This is the environment value where the workflow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 jobs:
   code:
     runs-on: ubuntu-latest
