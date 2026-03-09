@@ -11,7 +11,7 @@ jobs:
 
   # This is the name of the job 1
    greet:
-     # This is github runner. each job runs on a runner
+     # This is a GitHub runner. each job runs on a runner
      runs-on: ubuntu-latest
      steps:
        - name: say hello to users
