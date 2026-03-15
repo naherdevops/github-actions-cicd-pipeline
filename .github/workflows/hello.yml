@@ -5,7 +5,12 @@ name: Hello
 # runs on a trigger
 on: 
   workflow_dispatch: 
-  
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - '**.html'
+  pull_request:
+    branches: [main]
 # These are jobs inside the workflow
 jobs: 
 
@@ -21,7 +26,7 @@ jobs:
          run: echo " Hello $USER" 
          
     # This is the name of the job 2      
-   show-version:
+   details:
      runs-on: ubuntu-latest 
      steps:
       - name: version of python, docker, etc
