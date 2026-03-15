@@ -15,6 +15,7 @@ on:
           - prod
           - staging
 jobs:
+  # every job needs seperate runner, its called parallelism
   code:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +36,7 @@ jobs:
         run: echo "Testing the Container"
       
   deploy:
-    if: ${{ inputs.environment == 'dev' }}
+    if: inputs.environment == 'dev'
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
