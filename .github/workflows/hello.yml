@@ -11,6 +11,7 @@ on:
   #     - '**.html'
   pull_request:
     branches: [main]
+    
 # These are jobs inside the workflow
 jobs: 
 
