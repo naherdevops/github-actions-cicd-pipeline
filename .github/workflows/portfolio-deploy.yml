@@ -1,0 +1,47 @@
+name: Portfolio
+on:
+  #push:
+  #  branches: [main]
+   workflow_dispatch:
+
+permissions:
+   pages: write
+   contents: write
+   id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+      
+    steps:
+        # get access to your Portfolio code via pre-built actions
+        # clone or checkout your code where this workflowvis written
+
+        # STEP: 1
+       - name: Checkout code
+         uses: actions/checkout@v4
+
+      # setup GitHub Pages
+      # STEP: 2
+       - name: Setup GitHub Pages
+         uses: actions/configure-pages@v4
+
+      # static code artifacts
+      # STEP: 3
+       - name: Upload static files
+         uses: actions/upload-pages-artifact@v4
+         with:
+            path: ./
+        # Mqke pages 
+        # STEP: 4
+       - name: Deploy to GitHub Pages
+         id: deployment
+         uses: actions/deploy-pages@v4
+        
+
+    
