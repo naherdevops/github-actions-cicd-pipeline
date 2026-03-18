@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>A short tagline or professional title.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Introduce yourself. Mention your skills and what you enjoy doing.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Project 1</h3>
+                    <p>A brief description of your first project. Link to the project's details or source code.</p>
+                </li>
+                <li>
+                    <h3>Project 2</h3>
+                    <p>A brief description of your second project.</p>
+                </li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Provide ways for visitors to get in touch with you.</p>
+            <ul>
+                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com" target="_blank">Your Profile</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple JavaScript to automatically set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
