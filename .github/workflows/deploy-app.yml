@@ -12,7 +12,10 @@ jobs:
         steps:
            - name: Checkout code
              uses: actions/checkout@v4
-        
+
+           - name: Set up docker compose (optional, usually pre-installed on self-hosted runners)
+             uses: docker/setup-compose-action@v2
+
            - name: Deploy with docker compose
              run: docker compose up -d --build
                 
