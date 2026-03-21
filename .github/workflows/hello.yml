@@ -9,9 +9,7 @@ on:
   #   branches: [main]
   #   paths:
   #     - '**.html'
-  pull_request:
-    branches: [main]
-    
+  
 # These are jobs inside the workflow
 jobs: 
 
