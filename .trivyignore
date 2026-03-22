@@ -1,4 +1,3 @@
-# ignore the velnerability for
-
+# ignore the vulnerability for
 # libgc
-CVE-2026-0861
+# CVE-2026-0861
