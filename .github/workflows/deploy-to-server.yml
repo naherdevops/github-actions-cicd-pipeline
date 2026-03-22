@@ -43,8 +43,10 @@ jobs:
                     echo "Running App"
                     
                     export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
-                    export DOCKER_TAG=${{ github.event.workflow_run.head_sha }}
-                    echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USER }}" --password-stdin
+                    # export DOCKER_TAG=${{ github.event.workflow_run.head_sha }}
+                    export DOCKER_TAG=latest
+                    export DOCKER_TAG=${GITHUB_SHA}
+                    echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ vars.DOCKERHUB_USER }} --password-stdin
                     cd ~/devops
                     docker compose pull 
                     docker compose down
